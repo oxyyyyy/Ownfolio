@@ -1,3 +1,50 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  color: #666; }
 
+@media (min-width: 1200px) {
+  .container-fluid {
+    padding-left: 80px;
+    padding-right: 80px; } }
+
+nav {
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: #fff !important; }
+  nav .nav-link {
+    padding: 18px !important; }
+
+header {
+  height: 100vh;
+  padding-top: 70px;
+  padding-bottom: 70px; }
+  header .container-fluid {
+    height: 100%; }
+    header .container-fluid .header_bg_img {
+      height: 100%;
+      background-image: url("../img/slider1.jpg");
+      background-size: cover;
+      background-position: center top; }
+      header .container-fluid .header_bg_img .main_title {
+        padding-top: 25vh;
+        padding-left: 13%; }
+        header .container-fluid .header_bg_img .main_title h1 {
+          color: #333;
+          font-size: 44px;
+          font-weight: 700;
+          margin-bottom: 50px; }
+          header .container-fluid .header_bg_img .main_title h1 span {
+            font-size: 80px; }
+        header .container-fluid .header_bg_img .main_title p {
+          color: #80808a;
+          font-size: 20px;
+          font-weight: 300;
+          margin: 0; }
+        header .container-fluid .header_bg_img .main_title p.prof {
+          font-size: 24px; }
 
 /*# sourceMappingURL=main.css.map */
