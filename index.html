@@ -30,31 +30,31 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link active active_link" href="#">intro <span class="sr-only">(current)</span></a>
+						<a class="nav-link active_link" href="#">intro <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">about</a>
+						<a class="nav-link" href="#about">about</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">skills</a>
+						<a class="nav-link" href="#skills">skills</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">work</a>
+						<a class="nav-link" href="#work">work</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">experience</a>
+						<a class="nav-link" href="#experience">experience</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">clients</a>
+						<a class="nav-link" href="#clients">clients</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">testimonial</a>
+						<a class="nav-link" href="#testimonial">testimonial</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">blog</a>
+						<a class="nav-link" href="#blog">blog</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">contact</a>
+						<a class="nav-link" href="#contact">contact</a>
 					</li>
 				</ul>
 				<a href="#" class="btn_own">hire me</a>
@@ -73,28 +73,99 @@
 			</div>
 		</header>
 
+
+
 		<div class="container-fluid">
 
-		<section id="here_i_am">
-			<div class="row">
-				<div class="col-sm-3">
-					<h2>HERE I AM</h2>
+			<section id="about">
+				<div class="row inner_sec_row">
+					<div class="col-sm-3">
+						<h2>HERE I AM</h2>
+					</div>
+					<div class="col-sm-9">
+						<p>I'm an interdisciplinary designer and illustrator living in Austin, Texas. Currently, I serve as the Head of Design and Community at Bdthemes — the world's marketplace for design. I'm available for speaking engagements, interviews, and freelance projects</p>
+						<p>I would describe myself as someone who is honest, caring, intelligent, hardworking, and ambitious. I have a great sense of humour. I am an easy going person & don’t get easily disturbed by down’s in my life. I a spiritual person & have a good library of best spiritual books. I also enjoy travelling, watching movies, going out for dinner, and having great intellectual conversations!</p>
+					</div>
 				</div>
-				<div class="col-sm-9">
-					<p>I'm an interdisciplinary designer and illustrator living in Austin, Texas. Currently, I serve as the Head of Design and Community at Bdthemes — the world's marketplace for design. I'm available for speaking engagements, interviews, and freelance projects</p>
-					<p>I would describe myself as someone who is honest, caring, intelligent, hardworking, and ambitious. I have a great sense of humour. I am an easy going person & don’t get easily disturbed by down’s in my life. I a spiritual person & have a good library of best spiritual books. I also enjoy travelling, watching movies, going out for dinner, and having great intellectual conversations!</p>
+			</section>
+
+			<section id="skills">
+				<div class="row inner_sec_row">
+					<div class="col-lg-3 col-md-4">
+						<h2>MY SKILLS</h2>
+					</div>
+					<div class="col-lg-6 col-md-4">
+						<label for="ux_progress">UX Design</label>
+						<label for="ux_progress" class="percent">90%</label>
+						<div class="progress">
+							<div class="progress-bar" id="ux_progress" role="progressbar" style="width: 0%; height: 4px;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+						<label for="art_progress">Art Design</label>
+						<label for="art_progress" class="percent">79%</label>
+						<div class="progress">
+							<div class="progress-bar" id="art_progress" role="progressbar" style="width: 0%; height: 4px;" aria-valuenow="79" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+						<label for="graphic_progress">Graphic Design</label>
+						<label for="graphic_progress" class="percent">69%</label>
+						<div class="progress">
+							<div class="progress-bar" id="graphic_progress" role="progressbar" style="width: 0%; height: 4px;" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4">
+						<div id="circle"></div>
+						<div class="circle_value">
+							<span>80%</span>
+							<p>Overall Expertise</p>
+						</div>
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		
 
 		</div>
 
 
 
 		<!-- jQuery first, then Tether, then Bootstrap JS. -->
-		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+		<script src="js/circle-progress.min.js"></script>
+
+		<!-- Progress bar animation -->
+		<script>
+	 		$(document).ready(function() {
+	      $('.progress .progress-bar').css("width",
+            function() {
+                return $(this).attr("aria-valuenow") + "%";
+            }
+	        )
+	    });
+		</script>
+
+		<!-- Circle progress bar -->
+		<script>
+			$(document).ready(function() {
+			  $('#circle').circleProgress({
+			    value: 0.8,
+			    size: 200,
+			    startAngle: -Math.PI/2,
+			    thickness: 4,
+			    fill: "#23c6ec"
+			  });
+		  });
+		</script>
+
+		<!-- Active menu item -->
+		<script>
+			$(document).ready(function(){
+			  $('ul li a').click(function(){
+			    $('li a').removeClass("active_link");
+			    $(this).addClass("active_link");
+			});
+			});
+		</script>
 
 	</body>
 </html>

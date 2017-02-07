@@ -1,3 +1,10 @@
+// ______________________________________________________
+// TODO:
+// 1. Доверстать страницу
+// 2. Сделать активный пункт меню по скролу + плавные якоря
+// 3. Проверить адаптив
+// ______________________________________________________
+
 @import vars.sass
 
 body
@@ -10,9 +17,13 @@ body
 	@media (min-width: 1200px)
 		padding-left: 80px
 		padding-right: 80px
+.inner_sec_row
+	padding: 120px 7% 95px 7%
+.progress-bar
+	background-color: $accentColor
 
 .btn_own
-	border: 2px solid #23c6ec
+	border: 2px solid $accentColor
 	text-transform: uppercase
 	padding: 0 25px
 	height: 38px
@@ -20,7 +31,7 @@ body
 	color: rgba(0,0,0,.5)
 	transition: 0.5s cubic-bezier(0.06, 0.68, 0.57, 1.07)
 	&:hover
-		background-color: #23c6ec
+		background-color: $accentColor
 		color: #fff
 		text-decoration: none
 
@@ -43,7 +54,7 @@ nav
 		transition: 0.5s cubic-bezier(0.06, 0.68, 0.57, 1.07)
 		&::after
 			content: ""
-			background-color: #23c6ec
+			background-color: $accentColor
 			width: 0
 			height: 2px
 			position: absolute
@@ -53,10 +64,11 @@ nav
 	.nav-link:hover::after
 		width: 20px
 	.active_link
+		color: rgba(0,0,0,.9) !important
 		&::after
 			transition: 0.5s cubic-bezier(0.06, 0.68, 0.57, 1.07)
 			content: ""
-			background-color: #23c6ec
+			background-color: $accentColor
 			width: 20px
 			height: 2px
 			position: absolute
@@ -93,8 +105,26 @@ header
 				p.prof
 					font-size: 24px
 
-section#here_i_am
-	padding: 120px 7% 95px 7%
-	background-color: #fafafa
-	p
-		line-height: 27px
+section#about
+	.inner_sec_row
+		background-color: #fafafa
+		p
+			line-height: 27px
+
+section#skills
+	.percent
+		float: right
+	.progress
+		margin-bottom: 50px
+		.progress-bar
+			transition: 3s cubic-bezier(0.06, 0.68, 0.57, 1.07)
+	#circle
+		text-align: center
+	.circle_value
+		text-align: center
+		position: relative
+		top: -133px
+		span
+			font-size: 20px
+			font-weight: 700
+			color: #000

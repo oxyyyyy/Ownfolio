@@ -8,6 +8,12 @@ body {
     padding-left: 80px;
     padding-right: 80px; } }
 
+.inner_sec_row {
+  padding: 120px 7% 95px 7%; }
+
+.progress-bar {
+  background-color: #23c6ec; }
+
 .btn_own {
   border: 2px solid #23c6ec;
   text-transform: uppercase;
@@ -49,15 +55,17 @@ nav {
       transition: 0.5s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
   nav .nav-link:hover::after {
     width: 20px; }
-  nav .active_link::after {
-    transition: 0.5s cubic-bezier(0.06, 0.68, 0.57, 1.07);
-    content: "";
-    background-color: #23c6ec;
-    width: 20px;
-    height: 2px;
-    position: absolute;
-    top: 37px;
-    left: 18px; }
+  nav .active_link {
+    color: rgba(0, 0, 0, 0.9) !important; }
+    nav .active_link::after {
+      transition: 0.5s cubic-bezier(0.06, 0.68, 0.57, 1.07);
+      content: "";
+      background-color: #23c6ec;
+      width: 20px;
+      height: 2px;
+      position: absolute;
+      top: 37px;
+      left: 18px; }
   nav .btn_own {
     margin-top: 8px; }
 
@@ -89,10 +97,26 @@ header {
         header .container-fluid .header_bg_img .main_title p.prof {
           font-size: 24px; }
 
-section#here_i_am {
-  padding: 120px 7% 95px 7%;
+section#about .inner_sec_row {
   background-color: #fafafa; }
-  section#here_i_am p {
+  section#about .inner_sec_row p {
     line-height: 27px; }
+
+section#skills .percent {
+  float: right; }
+section#skills .progress {
+  margin-bottom: 50px; }
+  section#skills .progress .progress-bar {
+    transition: 3s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
+section#skills #circle {
+  text-align: center; }
+section#skills .circle_value {
+  text-align: center;
+  position: relative;
+  top: -133px; }
+  section#skills .circle_value span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000; }
 
 /*# sourceMappingURL=main.css.map */
