@@ -11,6 +11,25 @@ body
 		padding-left: 80px
 		padding-right: 80px
 
+.btn_own
+	border: 2px solid #23c6ec
+	text-transform: uppercase
+	padding: 0 25px
+	height: 38px
+	line-height: 35px
+	color: rgba(0,0,0,.5)
+	transition: 0.5s cubic-bezier(0.06, 0.68, 0.57, 1.07)
+	&:hover
+		background-color: #23c6ec
+		color: #fff
+		text-decoration: none
+
+h2
+	font-size: 22px
+	font-weight: 700
+	line-height: 22px
+	color: #000
+
 nav
 	padding-left: 80px !important
 	padding-right: 80px !important
@@ -20,11 +39,35 @@ nav
 	background-color: #fff !important
 	.nav-link
 		padding: 18px !important
+		position: relative
+		transition: 0.5s cubic-bezier(0.06, 0.68, 0.57, 1.07)
+		&::after
+			content: ""
+			background-color: #23c6ec
+			width: 0
+			height: 2px
+			position: absolute
+			top: 37px
+			left: 18px
+			transition: 0.5s cubic-bezier(0.06, 0.68, 0.57, 1.07)
+	.nav-link:hover::after
+		width: 20px
+	.active_link
+		&::after
+			transition: 0.5s cubic-bezier(0.06, 0.68, 0.57, 1.07)
+			content: ""
+			background-color: #23c6ec
+			width: 20px
+			height: 2px
+			position: absolute
+			top: 37px
+			left: 18px
+	.btn_own
+		margin-top: 8px
 
 header
 	height: 100vh
 	padding-top: 70px
-	padding-bottom: 70px
 	.container-fluid
 		height: 100%
 		.header_bg_img
@@ -49,3 +92,9 @@ header
 					margin: 0
 				p.prof
 					font-size: 24px
+
+section#here_i_am
+	padding: 120px 7% 95px 7%
+	background-color: #fafafa
+	p
+		line-height: 27px
