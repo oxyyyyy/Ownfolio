@@ -3,6 +3,9 @@ body {
   font-size: 15px;
   color: #666; }
 
+a {
+  text-decoration: none !important; }
+
 @media (min-width: 1200px) {
   .container-fluid {
     padding-left: 80px;
@@ -24,8 +27,7 @@ body {
   transition: 1s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
   .btn_own:hover {
     background-color: #23c6ec;
-    color: #fff;
-    text-decoration: none; }
+    color: #fff; }
 
 h2 {
   font-size: 22px;
@@ -129,7 +131,6 @@ section#work .inner_sec_row {
     justify-content: space-around; }
     section#work .inner_sec_row .flex_gallery a {
       margin-bottom: 15px;
-      text-decoration: none;
       color: #fff; }
       section#work .inner_sec_row .flex_gallery a .img_gallery {
         width: 300px;
@@ -178,5 +179,115 @@ section#clients .inner_sec_row a {
     opacity: 0.9; }
   section#clients .inner_sec_row a img {
     width: 100%; }
+
+section#testimonial .inner_sec_row {
+  background-image: url("../img/testimonial-bg.jpg"); }
+  section#testimonial .inner_sec_row h2 {
+    color: #fff; }
+  section#testimonial .inner_sec_row .carousel {
+    margin-bottom: 50px; }
+    section#testimonial .inner_sec_row .carousel .carousel-item {
+      color: #fff;
+      flex-direction: column;
+      align-items: flex-start; }
+      section#testimonial .inner_sec_row .carousel .carousel-item img {
+        border-radius: 3px;
+        margin-bottom: 15px; }
+      section#testimonial .inner_sec_row .carousel .carousel-item h3 {
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-bottom: 30px; }
+        section#testimonial .inner_sec_row .carousel .carousel-item h3 span {
+          font-size: 12px; }
+      section#testimonial .inner_sec_row .carousel .carousel-item q {
+        font-size: 18px;
+        line-height: 27px;
+        font-style: italic; }
+    section#testimonial .inner_sec_row .carousel .carousel-indicators {
+      bottom: -45px;
+      justify-content: flex-start;
+      margin-left: 0;
+      margin-right: 0; }
+      section#testimonial .inner_sec_row .carousel .carousel-indicators li {
+        max-width: 10px;
+        height: 10px;
+        border-radius: 50%; }
+
+section#blog .inner_sec_row {
+  background-color: #fafafa; }
+  section#blog .inner_sec_row .carousel .carousel-indicators {
+    bottom: -45px;
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-right: 0; }
+    section#blog .inner_sec_row .carousel .carousel-indicators li {
+      background-color: #ddd;
+      max-width: 10px;
+      height: 10px;
+      border-radius: 50%; }
+    section#blog .inner_sec_row .carousel .carousel-indicators .active {
+      background-color: #23c6ec; }
+  section#blog .inner_sec_row .carousel .carousel-item h3 a {
+    color: #444;
+    font-size: 18px; }
+  section#blog .inner_sec_row .carousel .carousel-item p.date {
+    color: #c5c5c5;
+    font-size: 12px; }
+  section#blog .inner_sec_row .carousel .carousel-item p {
+    color: #9B9B9B;
+    font-size: 15px;
+    line-height: 27px; }
+
+section#contact {
+  margin-bottom: 50px; }
+  section#contact .inner_sec_row {
+    background-image: url("../img/contact.jpg");
+    background-size: cover; }
+    section#contact .inner_sec_row h2 {
+      color: #fff; }
+    section#contact .inner_sec_row form input {
+      border: none;
+      border-radius: 0;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      padding-left: 0;
+      padding-right: 0;
+      outline: none;
+      background-color: transparent;
+      transition: 1s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
+      section#contact .inner_sec_row form input:focus {
+        border-bottom: 2px solid #23c6ec; }
+    section#contact .inner_sec_row form input.input_inline_own {
+      width: 45%;
+      margin: 0 2%;
+      display: inline; }
+    section#contact .inner_sec_row form input#message_input {
+      width: 95%;
+      margin: 50px 2% 20px 2%; }
+    section#contact .inner_sec_row form .btn_submit {
+      color: #fff;
+      background-color: #23c6ec;
+      margin-bottom: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      height: 45px;
+      margin: auto; }
+
+footer {
+  background-color: #fff;
+  padding: 20px 0; }
+  footer p.copyright {
+    display: inline;
+    font-size: 12px;
+    line-height: 22px;
+    margin: 0; }
+    footer p.copyright a {
+      color: #444; }
+  footer .social {
+    display: inline;
+    float: right; }
+    footer .social a {
+      margin-left: 5px; }
+      footer .social a i {
+        color: #23c6ec; }
 
 /*# sourceMappingURL=main.css.map */

@@ -11,6 +11,8 @@ body
 	font-family: 'Open Sans', sans-serif
 	font-size: 15px
 	color: #666
+a
+	text-decoration: none !important
 
 // Setting up own container
 .container-fluid
@@ -33,7 +35,6 @@ body
 	&:hover
 		background-color: $accentColor
 		color: #fff
-		text-decoration: none
 
 h2
 	font-size: 22px
@@ -140,7 +141,6 @@ section#work
 			justify-content: space-around
 			a
 				margin-bottom: 15px
-				text-decoration: none
 				color: #fff
 				.img_gallery
 					width: 300px
@@ -192,3 +192,119 @@ section#clients
 				opacity: 0.9
 			img
 				width: 100%
+
+section#testimonial
+	.inner_sec_row
+		background-image: url("../img/testimonial-bg.jpg")
+		h2
+			color: #fff
+		.carousel
+			margin-bottom: 50px
+			.carousel-item
+				color: #fff
+				flex-direction: column
+				align-items: flex-start
+				img
+					border-radius: 3px
+					margin-bottom: 15px
+				h3
+					text-transform: uppercase
+					font-size: 16px
+					margin-bottom: 30px
+					span
+						font-size: 12px
+				q
+					font-size: 18px
+					line-height: 27px
+					font-style: italic
+			.carousel-indicators
+				bottom: -45px
+				justify-content: flex-start
+				margin-left: 0
+				margin-right: 0
+				li
+					max-width: 10px
+					height: 10px
+					border-radius: 50%
+
+section#blog
+	.inner_sec_row
+		background-color: $darkerWhite
+		.carousel
+			.carousel-indicators
+				bottom: -45px
+				justify-content: flex-start
+				margin-left: 0
+				margin-right: 0
+				li
+					background-color: #ddd
+					max-width: 10px
+					height: 10px
+					border-radius: 50%
+				.active
+					background-color: $accentColor
+			.carousel-item
+				h3
+					a
+						color: #444
+						font-size: 18px
+				p.date
+					color: #c5c5c5
+					font-size: 12px
+				p
+					color: #9B9B9B
+					font-size: 15px
+					line-height: 27px
+
+section#contact
+	margin-bottom: 50px
+	.inner_sec_row
+		background-image: url("../img/contact.jpg")
+		background-size: cover
+		h2
+			color: #fff
+		form
+			input
+				border: none
+				border-radius: 0
+				border-bottom: 2px solid rgba(255, 255, 255, 0.2)
+				padding-left: 0
+				padding-right: 0
+				outline: none
+				background-color: transparent
+				transition: $transitionProperty
+				&:focus
+					border-bottom: 2px solid $accentColor
+			input.input_inline_own
+				width: 45%
+				margin: 0 2%
+				display: inline
+			input#message_input
+				width: 95%
+				margin: 50px 2% 20px 2%
+			.btn_submit
+				color: #fff
+				background-color: $accentColor
+				margin-bottom: 50px
+				font-size: 14px
+				font-weight: 600
+				height: 45px
+				margin: auto
+
+footer
+	background-color: #fff
+	padding: 20px 0
+	p.copyright
+		display: inline
+		font-size: 12px
+		line-height: 22px
+		margin: 0
+		a
+			color: #444
+	.social
+		display: inline
+		float: right
+		a
+			margin-left: 5px
+			i
+				color: $accentColor
