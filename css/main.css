@@ -242,7 +242,9 @@ section#contact {
   margin-bottom: 50px; }
   section#contact .inner_sec_row {
     background-image: url("../img/contact.jpg");
-    background-size: cover; }
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 200px; }
     section#contact .inner_sec_row h2 {
       color: #fff; }
     section#contact .inner_sec_row form input {
