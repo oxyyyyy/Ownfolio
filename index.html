@@ -16,6 +16,9 @@
 		<!-- Placeholder animation -->
 		<link rel="stylesheet" href="css/placeholder.css">
 
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="css/animate.css">
+
 		<!-- Open Sans font -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
 
@@ -27,7 +30,7 @@
 
 	<body>
 
-		<nav class="navbar navbar-toggleable-md fixed-top navbar-light bg-faded">
+		<nav class="navbar navbar-toggleable-lg fixed-top navbar-light bg-faded">
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -67,7 +70,7 @@
 			</div>
 		</nav>
 
-		<header id="intro">
+		<header id="intro" class="wow fadeIn">
 			<div class="container-fluid">
 				<div class="header_bg_img">
 					<div class="main_title">
@@ -83,7 +86,7 @@
 
 		<div class="container-fluid">
 
-			<section id="about">
+			<section id="about" class="wow fadeIn">
 				<div class="row inner_sec_row">
 					<div class="col-sm-3">
 						<h2>HERE I AM</h2>
@@ -95,7 +98,7 @@
 				</div>
 			</section>
 
-			<section id="skills">
+			<section id="skills" class="wow slideInRight">
 				<div class="row inner_sec_row">
 					<div class="col-lg-3 col-md-4">
 						<h2>MY SKILLS</h2>
@@ -127,7 +130,7 @@
 				</div>
 			</section>
 
-			<section id="work">
+			<section id="work" class="wow slideInLeft">
 				<div class="row inner_sec_row">
 					<div class="col-lg-3 col-md-12">
 						<h2>MY WORK</h2>
@@ -146,7 +149,7 @@
 				</div>
 			</section>
 
-			<section id="experience">
+			<section id="experience" class="wow bounceInUp">
 				<div class="row inner_sec_row">
 					<div class="col-md-3">
 						<h2>MY EXPERIENCE</h2>
@@ -198,7 +201,7 @@
 				</div>
 			</section>
 
-			<section id="clients">
+			<section id="clients" class="wow bounceInUp">
 				<div class="row inner_sec_row">
 					<div class="col-md-3">
 						<h2>MY CLIENTS</h2>
@@ -236,7 +239,7 @@
 				</div>
 			</section>
 
-			<section id="testimonial">
+			<section id="testimonial" class="wow bounceInUp">
 				<div class="row inner_sec_row">
 					<div class="col-md-3">
 						<h2>WHAT CLIENTS SAY</h2>
@@ -270,7 +273,7 @@
 				</div>
 			</section>
 
-			<section id="blog">
+			<section id="blog" class="wow bounceInUp">
 				<div class="row inner_sec_row">
 					<div class="col-md-3">
 						<h2>RECENT BLOG</h2>
@@ -346,7 +349,7 @@
 				</div>
 			</section>
 
-			<section id="contact">
+			<section id="contact" class="wow bounceInUp">
 				<div class="row inner_sec_row">
 					<div class="col-md-3">
 						<h2>CONTACT WITH ME</h2>
@@ -390,6 +393,9 @@
 		<!-- Circle progress bar script -->
 		<script src="js/circle-progress.min.js"></script>
 
+		<!-- Wow.js -->
+		<script src="js/wow.min.js"></script>
+
 		<!-- Progress bar animation -->
 		<script>
 			$(document).ready(function() {
@@ -403,7 +409,7 @@
 
 		<!-- Circle progress bar -->
 		<script>
-			$(document).ready(function() {
+			$(document).ready(function() {+
 				$('#circle').circleProgress({
 					value: 0.8,
 					size: 200,
@@ -455,7 +461,7 @@
 				// Bind to scroll
 				$(window).scroll(function(){
 					 // Get container scroll position
-					 var fromTop = $(this).scrollTop()+topMenuHeight+500;
+					 var fromTop = $(this).scrollTop()+topMenuHeight+$(window).height()-400;
 					 
 					 // Get id of current scroll item
 					 var cur = scrollItems.map(function(){
@@ -475,6 +481,11 @@
 					 }
 				});
 				});
+		</script>
+
+		<!-- WOW.js init -->
+		<script>
+			new WOW().init();
 		</script>
 
 	</body>
