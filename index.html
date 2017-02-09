@@ -136,15 +136,37 @@
 						<h2>MY WORK</h2>
 					</div>
 					<div class="col-lg-9 col-md-12 flex_gallery">
-						<a href="#"><div class="img_gallery" style="background-image: url(img/gallery/1.jpg);"><div class="overlay_grad"><h3>Furniture design</h3><p>Branding</p></div></div></a>
-						<a href="#"><div class="img_gallery" style="background-image: url(img/gallery/2.jpg);"><div class="overlay_grad"><h3>Furniture design</h3><p>Branding</p></div></div></a>
-						<a href="#"><div class="img_gallery" style="background-image: url(img/gallery/3.jpg);"><div class="overlay_grad"><h3>Furniture design</h3><p>Branding</p></div></div></a>
+
+						<div class="gallery_item">
+							<a href="javascript:void(0);"><div class="img_gallery img_gallery_1" style="background-image: url(img/gallery/1.jpg);"><div class="overlay_grad"><h3>Furniture design</h3><p>Branding</p></div></div></a>
+							<div class="img_open img_open_1">
+								<img src="img/gallery/1.jpg" alt="">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia error, molestias veritatis corporis non labore excepturi est, velit animi incidunt magni deleniti libero laudantium facere esse. Earum dolorem tempore, eius?</p>
+							</div>
+						</div>
+
+						<div class="gallery_item">
+							<a href="javascript:void(0);"><div class="img_gallery img_gallery_2" style="background-image: url(img/gallery/2.jpg);"><div class="overlay_grad"><h3>Furniture design</h3><p>Branding</p></div></div></a>
+							<div class="img_open img_open_2">
+								<img src="img/gallery/2.jpg" alt="">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia error, molestias veritatis corporis non labore excepturi est, velit animi incidunt magni deleniti libero laudantium facere esse. Earum dolorem tempore, eius?</p>
+							</div>
+						</div>
+
+						<div class="gallery_item">
+							<a href="javascript:void(0);"><div class="img_gallery img_gallery_3" style="background-image: url(img/gallery/3.jpg);"><div class="overlay_grad"><h3>Furniture design</h3><p>Branding</p></div></div></a>
+							<div class="img_open img_open_3">
+								<img src="img/gallery/3.jpg" alt="">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia error, molestias veritatis corporis non labore excepturi est, velit animi incidunt magni deleniti libero laudantium facere esse. Earum dolorem tempore, eius?</p>
+							</div>
+						</div>
+						<!-- <a href="#"><div class="img_gallery" style="background-image: url(img/gallery/3.jpg);"><div class="overlay_grad"><h3>Furniture design</h3><p>Branding</p></div></div></a>
 						<a href="#"><div class="img_gallery" style="background-image: url(img/gallery/4.jpg);"><div class="overlay_grad"><h3>Furniture design</h3><p>Branding</p></div></div></a>
 						<a href="#"><div class="img_gallery" style="background-image: url(img/gallery/5.jpg);"><div class="overlay_grad"><h3>Furniture design</h3><p>Branding</p></div></div></a>
 						<a href="#"><div class="img_gallery" style="background-image: url(img/gallery/6.jpg);"><div class="overlay_grad"><h3>Furniture design</h3><p>Branding</p></div></div></a>
 						<a href="#"><div class="img_gallery" style="background-image: url(img/gallery/7.jpg);"><div class="overlay_grad"><h3>Furniture design</h3><p>Branding</p></div></div></a>
 						<a href="#"><div class="img_gallery" style="background-image: url(img/gallery/8.jpg);"><div class="overlay_grad"><h3>Furniture design</h3><p>Branding</p></div></div></a>
-						<a href="#"><div class="img_gallery" style="background-image: url(img/gallery/9.jpg);"><div class="overlay_grad"><h3>Furniture design</h3><p>Branding</p></div></div></a>
+						<a href="#"><div class="img_gallery" style="background-image: url(img/gallery/9.jpg);"><div class="overlay_grad"><h3>Furniture design</h3><p>Branding</p></div></div></a> -->
 					</div>
 				</div>
 			</section>
@@ -481,6 +503,20 @@
 					 }
 				});
 				});
+		</script>
+
+		<script>
+			$(document).ready(function() {
+				$(".img_gallery_1").click(function() {
+					$(".img_open_1").slideToggle();
+				});
+				$(".img_gallery_2").click(function() {
+					$(".img_open_2").slideToggle();
+				});
+				$(".img_gallery_3").click(function() {
+					$(".img_open_3").slideToggle();
+				});
+			});
 		</script>
 
 		<!-- WOW.js init -->
