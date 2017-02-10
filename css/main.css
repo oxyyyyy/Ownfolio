@@ -36,18 +36,35 @@ h2 {
   margin-bottom: 50px;
   color: #000; }
 
-nav {
+.nav--shamso {
+  position: fixed !important;
+  top: 30vh;
+  left: 15px;
+  display: block;
+  margin: 0 !important;
+  z-index: 500; }
+  .nav--shamso .nav__item::before {
+    background: rgba(232, 232, 232, 0.8) !important; }
+  .nav--shamso .nav__item--current::after {
+    box-shadow: inset 0 0 0 3px #23c6ec !important; }
+  .nav--shamso .nav__item--current span {
+    display: none; }
+  .nav--shamso a span.nav__item-title {
+    line-height: 33px !important;
+    text-transform: uppercase; }
+
+.navbar {
   padding-left: 80px !important;
   padding-right: 80px !important;
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
   background-color: #fff !important; }
-  nav .nav-link {
+  .navbar .nav-link {
     padding: 18px !important;
     position: relative;
     transition: 0.5s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
-    nav .nav-link::after {
+    .navbar .nav-link::after {
       content: "";
       background-color: #23c6ec;
       width: 0;
@@ -56,11 +73,11 @@ nav {
       top: 37px;
       left: 18px;
       transition: 0.5s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
-  nav .nav-link:hover::after {
+  .navbar .nav-link:hover::after {
     width: 20px; }
-  nav .active_link {
+  .navbar .active_link {
     color: rgba(0, 0, 0, 0.9) !important; }
-    nav .active_link::after {
+    .navbar .active_link::after {
       transition: 1s cubic-bezier(0.06, 0.68, 0.57, 1.07);
       content: "";
       background-color: #23c6ec;
@@ -69,7 +86,7 @@ nav {
       position: absolute;
       top: 37px;
       left: 18px; }
-  nav .btn_own {
+  .navbar .btn_own {
     margin-top: 8px; }
 
 header {

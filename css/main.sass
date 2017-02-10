@@ -44,7 +44,27 @@ h2
 	margin-bottom: 50px
 	color: #000
 
-nav
+.nav--shamso
+	position: fixed !important
+	top: 30vh
+	left: 15px
+	display: block
+	margin: 0 !important
+	z-index: 500
+	.nav__item
+		&::before
+			background: rgba(232, 232, 232, 0.8) !important
+	.nav__item--current
+		&::after
+			box-shadow: inset 0 0 0 3px $accentColor !important
+		span
+			display: none
+	a
+		span.nav__item-title
+			line-height: 33px !important
+			text-transform: uppercase
+
+.navbar
 	padding-left: 80px !important
 	padding-right: 80px !important
 	text-transform: uppercase

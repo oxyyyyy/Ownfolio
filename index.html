@@ -19,6 +19,9 @@
 		<!-- Animate.css -->
 		<link rel="stylesheet" href="css/animate.css">
 
+		<!-- Left menu -->
+		<link rel="stylesheet" href="css/component.css">
+
 		<!-- Open Sans font -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
 
@@ -29,6 +32,18 @@
 
 
 	<body>
+
+		<nav class="nav nav--shamso hidden-sm-down" id="left-menu">
+			<a class="nav__item nav__item--current" aria-label="Item 1" href="#intro"><span class="nav__item-title">intro</span></a>
+			<a class="nav__item" aria-label="Item 2" href="#about"><span class="nav__item-title">about</span></a>
+			<a class="nav__item" aria-label="Item 3" href="#skills"><span class="nav__item-title">skills</span></a>
+			<a class="nav__item" aria-label="Item 4" href="#work"><span class="nav__item-title">work</span></a>
+			<a class="nav__item" aria-label="Item 5" href="#experience"><span class="nav__item-title">experience</span></a>
+			<a class="nav__item" aria-label="Item 6" href="#clients"><span class="nav__item-title">clients</span></a>
+			<a class="nav__item" aria-label="Item 7" href="#testimonial"><span class="nav__item-title">testimonial</span></a>
+			<a class="nav__item" aria-label="Item 8" href="#blog"><span class="nav__item-title">blog</span></a>
+			<a class="nav__item" aria-label="Item 8" href="#contact"><span class="nav__item-title">contact</span></a>
+		</nav>
 
 		<nav class="navbar navbar-toggleable-lg fixed-top navbar-light bg-faded">
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -396,6 +411,10 @@
 		<!-- Wow.js -->
 		<script src="js/wow.min.js"></script>
 
+		<script src="js/clipboard.min.js"></script>
+
+		<script src="js/main.js"></script>
+
 		<!-- Progress bar animation -->
 		<script>
 			$(document).ready(function() {
@@ -421,6 +440,7 @@
 		</script>
 
 		<!-- Smooth anchors + active menu item on scroll -->
+		<!-- For the top-menu! -->
 		<script>
 				// Smooth anchors
 				$(document).ready(function(){
@@ -450,7 +470,7 @@
 				// so we can get a fancy scroll animation
 				menuItems.click(function(e){
 					var href = $(this).attr("href"),
-							offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+							offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+200;
 					// Removing dat fucking smooth anchor!
 					// $('html, body').stop().animate({ 
 					//     scrollTop: offsetTop
@@ -461,7 +481,7 @@
 				// Bind to scroll
 				$(window).scroll(function(){
 					 // Get container scroll position
-					 var fromTop = $(this).scrollTop()+topMenuHeight+$(window).height()-400;
+					 var fromTop = $(this).scrollTop()+topMenuHeight+200;
 					 
 					 // Get id of current scroll item
 					 var cur = scrollItems.map(function(){
@@ -478,6 +498,70 @@
 							 menuItems
 								 .removeClass("active_link")
 								 .filter("[href='#"+id+"']").addClass("active_link");
+					 }
+				});
+				});
+		</script>
+
+		<!-- Smooth anchors + active menu item on scroll -->
+		<!-- For the left-menu! -->
+		<script>
+				// Smooth anchors
+				$(document).ready(function(){
+						$("#left-menu").on("click","a", function (event) {
+							event.preventDefault();
+							var id  = $(this).attr('href'),
+								top = $(id).offset().top-$("nav").height();
+						$('body,html').animate({scrollTop: top}, 750);
+					});
+				});
+
+				// Highlight current menu item
+				$(document).ready(function() {
+				// Cache selectors
+				var lastId,
+						topMenu = $("#left-menu"),
+						topMenuHeight = $("nav").height()+1,
+						// All list items
+						menuItems = $(".nav__item"),
+						// Anchors corresponding to menu items
+						scrollItems = menuItems.map(function(){
+							var item = $($(this).attr("href"));
+							if (item.length) { return item; }
+						});
+
+				// Bind click handler to menu items
+				// so we can get a fancy scroll animation
+				menuItems.click(function(e){
+					var href = $(this).attr("href"),
+							offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+200;
+					// Removing dat fucking smooth anchor!
+					// $('html, body').stop().animate({ 
+					//     scrollTop: offsetTop
+					// }, 1000);
+					e.preventDefault();
+				});
+
+				// Bind to scroll
+				$(window).scroll(function(){
+					 // Get container scroll position
+					 var fromTop = $(this).scrollTop()+topMenuHeight+200;
+					 
+					 // Get id of current scroll item
+					 var cur = scrollItems.map(function(){
+						 if ($(this).offset().top < fromTop)
+							 return this;
+					 });
+					 // Get the id of the current element
+					 cur = cur[cur.length-1];
+					 var id = cur && cur.length ? cur[0].id : "";
+					 
+					 if (lastId !== id) {
+							 lastId = id;
+							 // Set/remove active class
+							 menuItems
+								 .removeClass("nav__item--current")
+								 .filter("[href='#"+id+"']").addClass("nav__item--current");
 					 }
 				});
 				});
