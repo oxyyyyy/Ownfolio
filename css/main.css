@@ -151,20 +151,6 @@ section#work .inner_sec_row {
             margin: 0; }
           section#work .inner_sec_row .flex_gallery a .img_gallery .overlay_grad p {
             font-size: 12px; }
-    section#work .inner_sec_row .flex_gallery .img_open {
-      display: none;
-      width: 600px;
-      margin-top: 15px;
-      margin-bottom: 15px; }
-      section#work .inner_sec_row .flex_gallery .img_open img {
-        width: 600px;
-        transition: 2s; }
-      section#work .inner_sec_row .flex_gallery .img_open p {
-        width: 600px;
-        display: inline-block; }
-    section#work .inner_sec_row .flex_gallery .gallery_item {
-      width: 300px;
-      overflow: visible; }
 
 section#experience .inner_sec_row {
   background-image: url("../img/exb2.jpg");
