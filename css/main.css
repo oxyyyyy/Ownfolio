@@ -36,18 +36,18 @@ h2 {
   margin-bottom: 50px;
   color: #000; }
 
-nav {
+nav.navbar {
   padding-left: 80px !important;
   padding-right: 80px !important;
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
   background-color: #fff !important; }
-  nav .nav-link {
+  nav.navbar .nav-link {
     padding: 18px !important;
     position: relative;
     transition: 0.5s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
-    nav .nav-link::after {
+    nav.navbar .nav-link::after {
       content: "";
       background-color: #23c6ec;
       width: 0;
@@ -56,11 +56,11 @@ nav {
       top: 37px;
       left: 18px;
       transition: 0.5s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
-  nav .nav-link:hover::after {
+  nav.navbar .nav-link:hover::after {
     width: 20px; }
-  nav .active_link {
+  nav.navbar .active_link {
     color: rgba(0, 0, 0, 0.9) !important; }
-    nav .active_link::after {
+    nav.navbar .active_link::after {
       transition: 1s cubic-bezier(0.06, 0.68, 0.57, 1.07);
       content: "";
       background-color: #23c6ec;
@@ -69,7 +69,7 @@ nav {
       position: absolute;
       top: 37px;
       left: 18px; }
-  nav .btn_own {
+  nav.navbar .btn_own {
     margin-top: 8px; }
 
 header {
