@@ -141,33 +141,27 @@ section#skills .circle_value {
 
 section#work .inner_sec_row {
   background-color: #fafafa; }
-  section#work .inner_sec_row .flex_gallery {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: space-around; }
-    section#work .inner_sec_row .flex_gallery a {
-      margin-bottom: 15px;
-      color: #fff; }
-      section#work .inner_sec_row .flex_gallery a .img_gallery {
-        width: 300px;
-        height: 200px;
-        background-size: cover;
-        background-position: center; }
-        section#work .inner_sec_row .flex_gallery a .img_gallery .overlay_grad {
-          width: 100%;
-          height: 100%;
-          padding: 30px;
-          background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
-          opacity: 0;
-          transition: 1s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
-          section#work .inner_sec_row .flex_gallery a .img_gallery .overlay_grad:hover {
-            opacity: 1; }
-          section#work .inner_sec_row .flex_gallery a .img_gallery .overlay_grad h3 {
-            font-size: 16px;
-            margin: 0; }
-          section#work .inner_sec_row .flex_gallery a .img_gallery .overlay_grad p {
-            font-size: 12px; }
+  section#work .inner_sec_row .action--close i {
+    color: #23c6ec; }
+  section#work .inner_sec_row .img-wrap {
+    position: relative;
+    color: #fff; }
+  section#work .inner_sec_row .overlay_grad {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 187.5px;
+    padding: 30px;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+    opacity: 0;
+    transition: 1s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
+    section#work .inner_sec_row .overlay_grad:hover {
+      opacity: 1; }
+    section#work .inner_sec_row .overlay_grad h3 {
+      font-size: 16px;
+      margin: 0; }
+    section#work .inner_sec_row .overlay_grad p {
+      font-size: 12px; }
 
 section#experience .inner_sec_row {
   background-image: url("../img/exb2.jpg");
