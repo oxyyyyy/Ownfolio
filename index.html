@@ -35,7 +35,7 @@
 
 		<!-- Mansory gallery (codedrops) -->
 		<script src="js/modernizr-custom.js"></script>
-		
+
 		<!-- Font awesome -->
 		<script src="https://use.fontawesome.com/5f3b626c9c.js"></script>
 
@@ -44,6 +44,7 @@
 
 	<body>
 
+		<!-- Left nav -->
 		<nav class="nav nav--shamso hidden-sm-down" id="left-menu">
 			<a class="nav__item nav__item--current" aria-label="Item 1" href="#intro"><span class="nav__item-title">intro</span></a>
 			<a class="nav__item" aria-label="Item 2" href="#about"><span class="nav__item-title">about</span></a>
@@ -56,11 +57,12 @@
 			<a class="nav__item" aria-label="Item 8" href="#contact"><span class="nav__item-title">contact</span></a>
 		</nav>
 
+		<!-- Top nav -->
 		<nav class="navbar navbar-toggleable-lg fixed-top navbar-light bg-faded">
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<a class="navbar-brand" href="#">Ownfolio</a>
+			<a class="navbar-brand" href="index.html">Ownfolio</a>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto" id="top-menu">
@@ -103,6 +105,9 @@
 						<h1>Hey!<br><span>I'am Arnold</span></h1>
 						<p class="prof">Web Expert, Bdthemes Ltd.</p>
 						<p class="since">Since 2008-Present</p>
+					</div>
+					<div class="look_portfolio">
+						<a href="#work"><i class="fa fa-briefcase" aria-hidden="true"></i> look my portfolio</a>
 					</div>
 				</div>
 			</div>
@@ -678,7 +683,7 @@
 					var href = $(this).attr("href"),
 							offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+200;
 					// Removing dat fucking smooth anchor!
-					// $('html, body').stop().animate({ 
+					// $('html, body').stop().animate({
 					//     scrollTop: offsetTop
 					// }, 1000);
 					e.preventDefault();
@@ -688,7 +693,7 @@
 				$(window).scroll(function(){
 					 // Get container scroll position
 					 var fromTop = $(this).scrollTop()+topMenuHeight+200;
-					 
+
 					 // Get id of current scroll item
 					 var cur = scrollItems.map(function(){
 						 if ($(this).offset().top < fromTop)
@@ -697,7 +702,7 @@
 					 // Get the id of the current element
 					 cur = cur[cur.length-1];
 					 var id = cur && cur.length ? cur[0].id : "";
-					 
+
 					 if (lastId !== id) {
 							 lastId = id;
 							 // Set/remove active class
@@ -742,7 +747,7 @@
 					var href = $(this).attr("href"),
 							offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+200;
 					// Removing dat fucking smooth anchor!
-					// $('html, body').stop().animate({ 
+					// $('html, body').stop().animate({
 					//     scrollTop: offsetTop
 					// }, 1000);
 					e.preventDefault();
@@ -752,7 +757,7 @@
 				$(window).scroll(function(){
 					 // Get container scroll position
 					 var fromTop = $(this).scrollTop()+topMenuHeight+200;
-					 
+
 					 // Get id of current scroll item
 					 var cur = scrollItems.map(function(){
 						 if ($(this).offset().top < fromTop)
@@ -761,7 +766,7 @@
 					 // Get the id of the current element
 					 cur = cur[cur.length-1];
 					 var id = cur && cur.length ? cur[0].id : "";
-					 
+
 					 if (lastId !== id) {
 							 lastId = id;
 							 // Set/remove active class
@@ -844,10 +849,8 @@
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
 		  ga('create', 'UA-91831893-1', 'auto');
 		  ga('send', 'pageview');
-
 		</script>
 
 	</body>

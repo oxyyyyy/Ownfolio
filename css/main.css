@@ -99,23 +99,37 @@ header {
       background-image: url("../img/slider1.jpg");
       background-size: cover;
       background-position: center top; }
+      @media screen and (max-width: 767px) {
+        header .container-fluid .header_bg_img {
+          background-image: none; } }
       header .container-fluid .header_bg_img .main_title {
         padding-top: 25vh;
         padding-left: 13%; }
+        @media screen and (max-width: 480px) {
+          header .container-fluid .header_bg_img .main_title {
+            padding-top: 15vh; } }
         header .container-fluid .header_bg_img .main_title h1 {
           color: #333;
-          font-size: 44px;
+          font-size: 2.5em;
           font-weight: 700;
           margin-bottom: 50px; }
           header .container-fluid .header_bg_img .main_title h1 span {
-            font-size: 80px; }
+            font-size: 1.8em; }
         header .container-fluid .header_bg_img .main_title p {
           color: #80808a;
-          font-size: 20px;
+          font-size: 1.3em;
           font-weight: 300;
           margin: 0; }
         header .container-fluid .header_bg_img .main_title p.prof {
-          font-size: 24px; }
+          font-size: 1.5em; }
+      header .container-fluid .header_bg_img .look_portfolio {
+        padding-left: 13%;
+        margin-top: 10%;
+        text-transform: uppercase; }
+        header .container-fluid .header_bg_img .look_portfolio a {
+          color: #80808a;
+          font-size: 1em;
+          font-weight: 300; }
 
 section#about .inner_sec_row {
   background-color: #fafafa; }

@@ -1,10 +1,8 @@
-// ______________________________________________________
+// ------------------------------------------------------
 // TODO:
-// 1. Доверстать страницу
-// 2. Проверить адаптив
-// 3. Индикаторы слева?
-// 4. Scroll to top btn
-// ______________________________________________________
+// 1. Проверить адаптив
+// 2. Scroll to top btn
+// ------------------------------------------------------
 
 @import vars.sass
 
@@ -106,27 +104,40 @@ header
 	.container-fluid
 		height: 100%
 		.header_bg_img
+			@media screen and (max-width: 767px)
+				background-image: none
 			height: 100%
 			background-image: url("../img/slider1.jpg")
 			background-size: cover
 			background-position: center top
 			.main_title
 				padding-top: 25vh
+				@media screen and (max-width: 480px)
+					padding-top: 15vh
 				padding-left: 13%
 				h1
 					color: #333
-					font-size: 44px
+					font-size: 2.5em
 					font-weight: 700
 					margin-bottom: 50px
 					span
-						font-size: 80px
+						font-size: 1.8em
 				p
 					color: #80808a
-					font-size: 20px
+					font-size: 1.3em
 					font-weight: 300
 					margin: 0
 				p.prof
-					font-size: 24px
+					font-size: 1.5em
+			.look_portfolio
+				padding-left: 13%
+				margin-top: 10%
+				text-transform: uppercase
+				a
+					color: #80808a
+					font-size: 1em
+					font-weight: 300
+
 
 section#about
 	.inner_sec_row
