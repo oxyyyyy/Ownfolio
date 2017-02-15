@@ -94,7 +94,7 @@
 						<a class="nav-link" href="#contact">contact</a>
 					</li>
 				</ul>
-				<a href="#" class="btn_own">hire me</a>
+				<a href="#" class="btn_own hidden-lg-down">hire me</a>
 			</div>
 		</nav>
 
@@ -859,6 +859,12 @@
 		    }
 		  });
 		});
+		</script>
+
+		<script>
+			$('.nav-link').click(function() {
+				$('#navbarSupportedContent').removeClass('show');
+			});
 		</script>
 
 		<!-- Scroll to top btn -->
