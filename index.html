@@ -107,7 +107,7 @@
 						<p class="since">Since 2008-Present</p>
 					</div>
 					<div class="look_portfolio">
-						<a href="#work"><i class="fa fa-briefcase" aria-hidden="true"></i> look my portfolio</a>
+						<a id="look_portfolio_btn" href="#work"><i class="fa fa-briefcase" aria-hidden="true"></i> look my portfolio</a>
 					</div>
 				</div>
 			</div>
@@ -591,7 +591,7 @@
 
 		<footer class="fixed-bottom">
 			<div class="container-fluid">
-				<p class="copyright">BUILT WITH HTML5 AND CSS3 COPYRIGHT © 2016 <a href="#">BDTHEMES LTD</a></p>
+				<p class="copyright">BUILT WITH HTML5 AND CSS3 COPYRIGHT © 2017 <a href="#">STUDIO 777</a></p>
 				<div class="social">
 					<a href="#"><i class="fa fa-lg fa-facebook" aria-hidden="true"></i></a>
 					<a href="#"><i class="fa fa-lg fa-twitter" aria-hidden="true"></i></a>
@@ -842,6 +842,28 @@
 			});
 		})();
 		</script>
+
+		<!-- Smooth scroll for "Look portfolio" btn -->
+		<script>
+		$(function() {
+		  $('#look_portfolio_btn').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html, body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
+		</script>
+
+		<!-- Scroll to top btn -->
+		<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow89.js"></script>
+		<noscript>Not seeing a <a href="http://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more info.</noscript>
 
 		<!-- Google analytics -->
 		<script>

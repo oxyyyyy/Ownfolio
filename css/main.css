@@ -1,7 +1,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
-  color: #666; }
+  color: #666;
+  overflow-x: hidden; }
 
 a {
   text-decoration: none !important; }
@@ -163,8 +164,8 @@ section#work .inner_sec_row {
   section#work .inner_sec_row .overlay_grad {
     position: absolute;
     top: 0;
-    width: 250px;
-    height: 187.5px;
+    width: 100%;
+    height: 100%;
     padding: 30px;
     background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
     opacity: 0;
@@ -176,6 +177,8 @@ section#work .inner_sec_row {
       margin: 0; }
     section#work .inner_sec_row .overlay_grad p {
       font-size: 12px; }
+  section#work .inner_sec_row .grid .grid__item {
+    width: 230px !important; }
 
 section#experience .inner_sec_row {
   background-image: url("../img/exb2.jpg");
@@ -314,7 +317,25 @@ footer {
     float: right; }
     footer .social a {
       margin-left: 5px; }
-      footer .social a i {
-        color: #23c6ec; }
+      footer .social a i.fa-facebook {
+        color: #3b5998; }
+      footer .social a i.fa-twitter {
+        color: #1da1f2; }
+      footer .social a i.fa-google-plus {
+        color: #dd4b39; }
+      footer .social a i.fa-vk {
+        color: #45668e; }
+      footer .social a i.fa-github {
+        color: #333; }
+
+#topcontrol {
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 5000; }
+  #topcontrol img {
+    width: 25px; }
+  @media screen and (max-width: 1199px) {
+    #topcontrol {
+      display: none; } }
 
 /*# sourceMappingURL=main.css.map */

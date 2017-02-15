@@ -10,6 +10,7 @@ body
 	font-family: 'Open Sans', sans-serif
 	font-size: 15px
 	color: #666
+	overflow-x: hidden
 a
 	text-decoration: none !important
 
@@ -175,8 +176,8 @@ section#work
 		.overlay_grad
 			position: absolute
 			top: 0
-			width: 250px
-			height: 187.5px
+			width: 100%
+			height: 100%
 			padding: 30px
 			background: linear-gradient(to bottom right,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
 			opacity: 0
@@ -188,6 +189,9 @@ section#work
 				margin: 0
 			p
 				font-size: 12px
+		.grid
+			.grid__item
+				width: 230px !important
 
 section#experience
 	.inner_sec_row
@@ -335,5 +339,22 @@ footer
 		float: right
 		a
 			margin-left: 5px
-			i
-				color: $accentColor
+			i.fa-facebook
+				color: #3b5998
+			i.fa-twitter
+				color: #1da1f2
+			i.fa-google-plus
+				color: #dd4b39
+			i.fa-vk
+				color: #45668e
+			i.fa-github
+				color: #333
+
+#topcontrol
+	bottom: 20px !important
+	right: 20px !important
+	z-index: 5000
+	img
+		width: 25px
+	@media screen and (max-width: 1199px)
+		display: none
