@@ -327,6 +327,12 @@ footer {
         color: #45668e; }
       footer .social a i.fa-github {
         color: #333; }
+  @media screen and (max-width: 515px) {
+    footer .container-fluid {
+      text-align: center; }
+    footer .social {
+      width: 100%;
+      text-align: center; } }
 
 #topcontrol {
   bottom: 20px !important;
