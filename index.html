@@ -94,7 +94,7 @@
 						<a class="nav-link" href="#contact">contact</a>
 					</li>
 				</ul>
-				<a href="#" class="btn_own hidden-lg-down">hire me</a>
+				<a href="#" class="btn_own hidden-lg-down" data-toggle="modal" data-target="#main_modal">hire me</a>
 			</div>
 		</nav>
 
@@ -602,7 +602,34 @@
 			</div>
 		</footer>
 
-
+		<!-- Modal -->
+		<div class="modal fade" id="main_modal" tabindex="-1" role="dialog" aria-labelledby="main_modalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="main_modalLabel">Hire me now!</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		      	<form action="form_handler.php" method="post">
+							<div class="form-group">
+						    <label for="name">Your name:</label>
+						    <input type="text" class="form-control input_inline_own" id="name" name="name324">
+						  </div>
+							<div class="form-group">
+						    <label for="tel">Your phone:</label>
+						    <input type="tel" class="form-control input_inline_own" id="tel" name="tel167">
+						  </div>
+							<div class="row justify-content-center">
+								<button type="submit" class="btn_own">Send</button>
+							</div>
+		      	</form>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 
 		<!-- jQuery first, then Tether, then Bootstrap JS. -->
 		<!-- Replaced jQury 3.1.1 to jQuery 1.12.4 -->

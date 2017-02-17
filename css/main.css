@@ -2,10 +2,26 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   color: #666;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  padding: 0 !important; }
 
 a {
   text-decoration: none !important; }
+
+button {
+  outline: none !important; }
+
+input {
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  outline: none !important;
+  background-color: transparent !important;
+  transition: 1s cubic-bezier(0.06, 0.68, 0.57, 1.07) !important; }
+  input:focus {
+    border-bottom: 2px solid #23c6ec !important; }
 
 @media (min-width: 1200px) {
   .container-fluid {
@@ -25,6 +41,7 @@ a {
   height: 38px;
   line-height: 35px;
   color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
   transition: 1s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
   .btn_own:hover {
     background-color: #23c6ec;
@@ -275,17 +292,6 @@ section#contact {
     padding-bottom: 200px; }
     section#contact .inner_sec_row h2 {
       color: #fff; }
-    section#contact .inner_sec_row form input {
-      border: none;
-      border-radius: 0;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-      padding-left: 0;
-      padding-right: 0;
-      outline: none;
-      background-color: transparent;
-      transition: 1s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
-      section#contact .inner_sec_row form input:focus {
-        border-bottom: 2px solid #23c6ec; }
     section#contact .inner_sec_row form input.input_inline_own {
       width: 45%;
       margin: 0 2%;
@@ -300,7 +306,8 @@ section#contact {
       font-size: 14px;
       font-weight: 600;
       height: 45px;
-      margin: auto; }
+      margin: auto;
+      cursor: pointer; }
 
 footer {
   background-color: #fff;
@@ -333,6 +340,30 @@ footer {
     footer .social {
       width: 100%;
       text-align: center; } }
+
+.modal .modal-content {
+  border: none;
+  border-radius: 0; }
+  .modal .modal-content .modal-header {
+    padding: 30px; }
+    .modal .modal-content .modal-header button.close:hover {
+      color: #23c6ec !important; }
+  .modal .modal-content .modal-body {
+    padding: 30px; }
+    .modal .modal-content .modal-body form input {
+      border-bottom: 2px solid #23c6ec !important; }
+    .modal .modal-content .modal-body form button {
+      font-family: "Open Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 20px; }
+
+.modal-open {
+  overflow: visible !important; }
+
+.modal-dialog {
+  margin-top: 20vh !important; }
 
 #topcontrol {
   bottom: 20px !important;

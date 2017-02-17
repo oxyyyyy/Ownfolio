@@ -10,8 +10,22 @@ body
 	font-size: 15px
 	color: #666
 	overflow-x: hidden
+	padding: 0 !important
 a
 	text-decoration: none !important
+button
+	outline: none !important
+input
+	border: none !important
+	border-radius: 0 !important
+	border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important
+	padding-left: 0 !important
+	padding-right: 0 !important
+	outline: none !important
+	background-color: transparent !important
+	transition: $transitionProperty !important
+	&:focus
+		border-bottom: 2px solid $accentColor !important
 
 // Setting up own container
 .container-fluid
@@ -30,6 +44,7 @@ a
 	height: 38px
 	line-height: 35px
 	color: rgba(0,0,0,.5)
+	background-color: transparent
 	transition: $transitionProperty
 	&:hover
 		background-color: $accentColor
@@ -296,17 +311,6 @@ section#contact
 		h2
 			color: #fff
 		form
-			input
-				border: none
-				border-radius: 0
-				border-bottom: 2px solid rgba(255, 255, 255, 0.2)
-				padding-left: 0
-				padding-right: 0
-				outline: none
-				background-color: transparent
-				transition: $transitionProperty
-				&:focus
-					border-bottom: 2px solid $accentColor
 			input.input_inline_own
 				width: 45%
 				margin: 0 2%
@@ -322,6 +326,7 @@ section#contact
 				font-weight: 600
 				height: 45px
 				margin: auto
+				cursor: pointer
 
 footer
 	background-color: #fff
@@ -354,6 +359,35 @@ footer
 		.social
 			width: 100%
 			text-align: center
+
+.modal
+	.modal-content
+		border: none
+		border-radius: 0
+		.modal-header
+			padding: 30px
+			button.close
+				&:hover
+					color: $accentColor !important
+		.modal-body
+			padding: 30px
+			form
+				input
+					border-bottom: 2px solid $accentColor !important
+				button
+					font-family: 'Open Sans', sans-serif
+					font-size: 13px
+					font-weight: 700
+					cursor: pointer
+					margin-top: 20px
+.modal-open
+	overflow: visible !important
+.modal-dialog
+	margin-top: 20vh !important
+// .show
+// 	display: flex !important
+// 	justify-content: center
+// 	align-items: center
 
 #topcontrol
 	bottom: 20px !important
