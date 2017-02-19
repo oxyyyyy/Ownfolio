@@ -211,7 +211,8 @@ section#experience .inner_sec_row {
       font-weight: 700;
       margin-bottom: 15px; }
       section#experience .inner_sec_row .exp_item h3 i {
-        color: #23c6ec; }
+        color: #23c6ec;
+        margin-right: 10px; }
     section#experience .inner_sec_row .exp_item p {
       color: rgba(255, 255, 255, 0.75);
       line-height: 27px;

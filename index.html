@@ -102,11 +102,11 @@
 			<div class="container-fluid">
 				<div class="header_bg_img">
 					<div class="main_title">
-						<h1>Hey!<br><span>I'am Arnold</span></h1>
-						<p class="prof">Web Expert, Bdthemes Ltd.</p>
-						<p class="since">Since 2008-Present</p>
+						<h1 class="wow fadeInDown" data-wow-delay="0.5s">Hey!<br><span>I'am Arnold</span></h1>
+						<p class="prof wow fadeInLeft" data-wow-delay="0.8s">Web Expert, Bdthemes Ltd.</p>
+						<p class="since wow fadeInLeft" data-wow-delay="1s">Since 2008-Present</p>
 					</div>
-					<div class="look_portfolio">
+					<div class="look_portfolio wow fadeInUp" data-wow-delay="2s">
 						<a id="look_portfolio_btn" href="#work"><i class="fa fa-briefcase" aria-hidden="true"></i> look my portfolio</a>
 					</div>
 				</div>
@@ -369,22 +369,22 @@
 				</div>
 			</section>
 
-			<section id="experience" class="wow bounceInUp">
+			<section id="experience">
 				<div class="row inner_sec_row">
 					<div class="col-md-3">
 						<h2>MY EXPERIENCE</h2>
 					</div>
-					<div class="col-md-9">
+					<div class="col-md-9 wow bounceInUp">
 						<div class="row">
 							<div class="col-md-6">
 								<div class="exp_item">
-									<h3><i class="fa fa-university" aria-hidden="true"></i> master degree</h3>
+									<h3><i class="fa fa-university" aria-hidden="true"></i>master degree</h3>
 									<p>A Master is an advanced degree conferred by universities around the world for completion of graduate study in a specific discipline.</p>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="exp_item">
-									<h3><i class="fa fa-university" aria-hidden="true"></i> master degree</h3>
+									<h3><i class="fa fa-list-alt" aria-hidden="true"></i>bachelor degree</h3>
 									<p>A Master is an advanced degree conferred by universities around the world for completion of graduate study in a specific discipline.</p>
 								</div>
 							</div>
@@ -392,13 +392,13 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="exp_item">
-									<h3><i class="fa fa-university" aria-hidden="true"></i> master degree</h3>
+									<h3><i class="fa fa-area-chart" aria-hidden="true"></i>school of science</h3>
 									<p>A Master is an advanced degree conferred by universities around the world for completion of graduate study in a specific discipline.</p>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="exp_item">
-									<h3><i class="fa fa-university" aria-hidden="true"></i> master degree</h3>
+									<h3><i class="fa fa-btc" aria-hidden="true"></i>investiment planning</h3>
 									<p>A Master is an advanced degree conferred by universities around the world for completion of graduate study in a specific discipline.</p>
 								</div>
 							</div>
@@ -406,13 +406,13 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="exp_item">
-									<h3><i class="fa fa-university" aria-hidden="true"></i> master degree</h3>
+									<h3><i class="fa fa-credit-card" aria-hidden="true"></i>wealth management</h3>
 									<p>A Master is an advanced degree conferred by universities around the world for completion of graduate study in a specific discipline.</p>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="exp_item">
-									<h3><i class="fa fa-university" aria-hidden="true"></i> master degree</h3>
+									<h3><i class="fa fa-file" aria-hidden="true"></i>mortage help</h3>
 									<p>A Master is an advanced degree conferred by universities around the world for completion of graduate study in a specific discipline.</p>
 								</div>
 							</div>
@@ -656,24 +656,28 @@
 		<!-- Progress bar animation -->
 		<script>
 			$(document).ready(function() {
-				$('.progress .progress-bar').css("width",
-						function() {
-								return $(this).attr("aria-valuenow") + "%";
-						}
-					)
+				setTimeout(function(){
+					$('.progress .progress-bar').css("width",
+							function() {
+									return $(this).attr("aria-valuenow") + "%";
+							}
+						)
+				}, 1000);
 			});
 		</script>
 
 		<!-- Circle progress bar -->
 		<script>
-			$(document).ready(function() {+
-				$('#circle').circleProgress({
-					value: 0.8,
-					size: 200,
-					startAngle: -Math.PI/2,
-					thickness: 4,
-					fill: "#23c6ec"
-				});
+			$(document).ready(function() {
+				setTimeout(function(){
+					$('#circle').circleProgress({
+						value: 0.8,
+						size: 200,
+						startAngle: -Math.PI/2,
+						thickness: 4,
+						fill: "#23c6ec"
+					});
+				}, 500);
 			});
 		</script>
 
