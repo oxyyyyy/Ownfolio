@@ -575,10 +575,10 @@
 						<h2>CONTACT WITH ME</h2>
 					</div>
 					<div class="col-md-9">
-						<form action="#">
-							<input class="form-control input_inline_own" type="text" id="name_input" placeholder="Name">
-							<input type="email" class="form-control input_inline_own" id="email_input" aria-describedby="emailHelp" placeholder="Email">
-							<input class="form-control" type="text" id="message_input" placeholder="Message">
+						<form action="form_handler_footer.php" method="post">
+							<input class="form-control input_inline_own" type="text" id="name_input" name="name726" placeholder="Name">
+							<input type="email" class="form-control input_inline_own" id="email_input" name="email264" aria-describedby="emailHelp" placeholder="Email">
+							<input class="form-control" type="text" id="message_input" name="message294" placeholder="Message">
 							<div class="text-center">
 								<button type="submit" class="btn_own btn_submit">send message</button>
 							</div>
@@ -613,7 +613,7 @@
 		        </button>
 		      </div>
 		      <div class="modal-body">
-		      	<form action="form_handler.php" method="post">
+		      	<form action="form_handler_modal.php" method="post">
 							<div class="form-group">
 						    <label for="name">Your name:</label>
 						    <input type="text" class="form-control input_inline_own" id="name" name="name324">
