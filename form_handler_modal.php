@@ -1,30 +1,49 @@
 <?php
 
-/* Задаем переменные */
+    // Only process POST reqeusts.
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Get the form fields and remove whitespace.
+        $name = strip_tags(trim($_POST["name"]));
+				$name = str_replace(array("\r","\n"),array(" "," "),$name);
+        $tel = trim($_POST["tel"]);
 
-$name = htmlspecialchars($_POST["name324"]);
-$tel = htmlspecialchars($_POST["tel167"]);
-$mail = "info@a-vlasenko.zzz.com.ua";
+        // Check that data was sent to the mailer.
+        if ( empty($name) OR empty($tel)) {
+            // Set a 400 (bad request) response code and exit.
+            http_response_code(400);
+            echo "Oops! There was a problem with your submission. Please complete the form and try again.";
+            exit;
+        }
 
-/* Ваш адрес и тема сообщения */
+        // Set the recipient email address.
+        // FIXME: Update this to your desired email address.
+        $recipient = "info@a-vlasenko.zzz.com.ua";
 
-$address = "info@a-vlasenko.zzz.com.ua";
-$sub = "Новая заявка на сайте a-vlasenko.zzz.com.ua";
+        // Set the email subject.
+        $subject = "New contact from $name";
 
-/* Формат письма */
+        // Build the email content.
+        $email_content = "Name: $name\n";
+        $email_content .= "Telephone:\n$tel\n";
 
-$mes = "Поступила новая заявка на сайте a-vlasenko.zzz.com.ua.\n
-Страница: http://a-vlasenko.zzz.com.ua/
-Клиента зовут: $name
-Телефон Клиента: $tel";
+        // Build the email headers.
+        $email_headers = "From: $name";
 
-/* Отправляем сообщение, используя mail() функцию */
+        // Send the email.
+        if (mail($recipient, $subject, $email_content, $email_headers)) {
+            // Set a 200 (okay) response code.
+            http_response_code(200);
+            echo "Thank You! Your message has been sent.";
+        } else {
+            // Set a 500 (internal server error) response code.
+            http_response_code(500);
+            echo "Oops! Something went wrong and we couldn't send your message.";
+        }
 
-$from = "From: $name <$mail> \r\n Reply-To: $mail \r\n";
-if (mail($address, $sub, $mes, $from)) {
-                header('Refresh:1; URL=http://a-vlasenko.zzz.com.ua/');
-                echo 'Письмо отправлено, через секунду вы вернетесь на сайт';}
-else {
-                header('Refresh:1; URL=http://a-vlasenko.zzz.com.ua/');
-                echo 'Письмо почему-то не отправлено, через секунду Вы вернетесь на сайт';}
+    } else {
+        // Not a POST request, set a 403 (forbidden) response code.
+        http_response_code(403);
+        echo "There was a problem with your submission, please try again.";
+    }
+
 ?>

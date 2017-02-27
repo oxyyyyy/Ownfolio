@@ -613,17 +613,17 @@
 		        </button>
 		      </div>
 		      <div class="modal-body">
-		      	<form action="form_handler_modal.php" method="post">
+		      	<form id="ajax_modal_form" method="POST" action="form_handler_modal.php">
 							<div class="form-group">
 						    <label for="name">Your name:</label>
-						    <input type="text" class="form-control input_inline_own" id="name" name="name324" required="">
+						    <input type="text" id="name" class="form-control input_inline_own" name="name324" required="">
 						  </div>
 							<div class="form-group">
 						    <label for="tel">Your phone:</label>
-						    <input type="tel" class="form-control input_inline_own" id="tel" name="tel167" required="">
+						    <input type="tel" id="tel" class="form-control input_inline_own" name="tel167" required="">
 						  </div>
 							<div class="row justify-content-center">
-								<button type="submit" class="btn_own">Send</button>
+								<button type="submit" id="modal_submit" class="btn_own">Send</button>
 							</div>
 		      	</form>
 		      </div>
@@ -632,8 +632,10 @@
 		</div>
 
 		<!-- jQuery first, then Tether, then Bootstrap JS. -->
-		<!-- Replaced jQury 3.1.1 to jQuery 1.12.4 -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script
+		  src="https://code.jquery.com/jquery-3.1.1.js"
+		  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+		  crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
@@ -896,6 +898,36 @@
 			$('.nav-link').click(function() {
 				$('#navbarSupportedContent').removeClass('show');
 			});
+		</script>
+
+		<!-- Ajax -->
+		<script>
+
+			$(function() {
+
+			    // Get the form.
+			    var form_modal = $('#ajax_contact_form');
+
+			    // Get the messages div.
+			    // var formMessages = $('#form-messages');
+
+					$(form_modal).submit(function(event) {
+			     // Stop the browser from submitting the form.
+			     event.preventDefault();
+					 });
+
+					 var form_modal_Data = $(form_modal).serialize();
+
+					 // Submit the form using AJAX.
+					$.ajax({
+					    type: 'POST',
+					    url: $(form_modal).attr('action'),
+					    data: form_modal_Data
+					})
+
+			});
+
+
 		</script>
 
 		<!-- Scroll to top btn -->
