@@ -293,6 +293,8 @@ section#contact {
     padding-bottom: 200px; }
     section#contact .inner_sec_row h2 {
       color: #fff; }
+    section#contact .inner_sec_row form input {
+      color: #fff; }
     section#contact .inner_sec_row form input.input_inline_own {
       width: 45%;
       margin: 0 2%;

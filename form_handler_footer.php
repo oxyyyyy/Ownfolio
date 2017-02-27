@@ -2,13 +2,14 @@
 
 /* Задаем переменные */
 
-$name = htmlspecialchars($_POST["name324"]);
-$tel = htmlspecialchars($_POST["tel167"]);
-$mail = "info@studio777.com";
+$name = htmlspecialchars($_POST["name726"]);
+$email = htmlspecialchars($_POST["email264"]);
+$message = htmlspecialchars($_POST["message294"]);
+$mail = "info@a-vlasenko.zzz.com.ua";
 
 /* Ваш адрес и тема сообщения */
 
-$address = "elektronikaion@gmail.com";
+$address = "info@a-vlasenko.zzz.com.ua";
 $sub = "Новая заявка на сайте a-vlasenko.zzz.com.ua";
 
 /* Формат письма */
@@ -16,7 +17,8 @@ $sub = "Новая заявка на сайте a-vlasenko.zzz.com.ua";
 $mes = "Поступила новая заявка на сайте a-vlasenko.zzz.com.ua.\n
 Страница: http://a-vlasenko.zzz.com.ua/
 Клиента зовут: $name
-Телефон Клиента: $tel";
+E-mail клиента: $email
+Сообщение клиента: $message";
 
 /* Отправляем сообщение, используя mail() функцию */
 
