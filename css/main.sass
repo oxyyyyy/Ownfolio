@@ -50,6 +50,21 @@ input
 		background-color: $accentColor
 		color: #fff
 
+.success
+	background-color: $success !important
+	border-color: $success !important
+	color: #fff !important
+	&:hover
+		background-color: $success !important
+		color: #fff !important
+.error
+	background-color: $error !important
+	border-color: $error !important
+	color: #fff !important
+	&:hover
+		background-color: $error !important
+		color: #fff !important
+
 h2
 	font-size: 22px
 	font-weight: 700
@@ -334,12 +349,6 @@ section#contact
 				transition: 0.5s
 				i
 					margin-top: 7px
-			.success
-				background-color: $success
-				border-color: $success
-			.error
-				background-color: $error
-				border-color: $error
 
 footer
 	background-color: #fff
@@ -393,6 +402,8 @@ footer
 					font-weight: 700
 					cursor: pointer
 					margin-top: 20px
+					i
+						margin-top: 4px
 .modal-open
 	overflow: visible !important
 .modal-dialog

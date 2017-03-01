@@ -614,17 +614,17 @@
 		        </button>
 		      </div>
 		      <div class="modal-body">
-		      	<form id="ajax_modal_form" method="POST" action="form_handler_modal.php">
+		      	<form id="modal_form" method="POST" action="form_handler_modal.php">
 							<div class="form-group">
 						    <label for="name">Your name:</label>
-						    <input type="text" id="name" class="form-control input_inline_own" name="name324" required="">
+						    <input type="text" id="name2" class="form-control input_inline_own" name="name2" required="">
 						  </div>
 							<div class="form-group">
 						    <label for="tel">Your phone:</label>
-						    <input type="tel" id="tel" class="form-control input_inline_own" name="tel167" required="">
+						    <input type="tel" id="tel" class="form-control input_inline_own" name="tel" required="">
 						  </div>
 							<div class="row justify-content-center">
-								<button type="submit" id="modal_submit" class="btn_own">Send</button>
+								<button type="submit" id="modal_form_submit" class="btn_own">Send</button>
 							</div>
 		      	</form>
 		      </div>
@@ -901,7 +901,7 @@
 			});
 		</script>
 
-		<!-- Ajax -->
+		<!-- Ajax footer contact form -->
 		<script>
 
 		$(document).ready(function() {
@@ -936,6 +936,62 @@
 					$('#name').val('');
 					$('#email').val('');
 					$('#message').val('');
+				})
+
+				.fail(function(data) {
+					// Make sure that the formStatus div has the 'error' class.
+					$(formStatus).removeClass('success bounceIn');
+					$(formStatus).addClass('error bounceIn');
+
+					// Set the message text.
+					if (data.responseText !== '') {
+							$(formStatus).text(data.responseText);
+					} else {
+							$(formStatus).text('Error.');
+					}
+				});
+
+			});
+
+			});
+
+
+		</script>
+
+		<!-- Ajax modal form -->
+		<script>
+
+		$(document).ready(function() {
+
+			var form = $('#modal_form');
+			var formStatus = $('#modal_form_submit');
+
+			$(form).submit(function(event) {
+
+				event.preventDefault();
+
+				var formData = $(form).serialize();
+
+				$.ajax({
+					type: 'POST',
+					url: $(form).attr('action'),
+					data: formData,
+					beforeSend: function () {
+						$(formStatus).html('<i class="fa fa-circle-o-notch fa-spin fa-2x fa-fw"></i>');
+					}
+				})
+
+				.done(function(response) {
+					// Make sure that the formStatus div has the 'success' class.
+					$(formStatus).removeClass('error bounceIn');
+					$(formStatus).addClass('success bounceIn');
+
+					// Set the message text.
+					$(formStatus).text(response);
+
+					// Clear the form.
+					$('#name2').val('');
+					$('#tel').val('');
 				})
 
 				.fail(function(data) {
