@@ -50,22 +50,6 @@ input
 		background-color: $accentColor
 		color: #fff
 
-.form_status
-	display: none
-	height: 100px
-	border-radius: 3px
-	margin-bottom: 50px
-	padding-top: 25px
-.success
-	display: block !important
-	border: 1px solid #5CB85C
-.error
-	display: block !important
-	border: 1px solid #D9534F
-.processing
-	display: block !important
-	border: 1px solid #5BC0DE
-
 h2
 	font-size: 22px
 	font-weight: 700
@@ -343,9 +327,19 @@ section#contact
 				margin-bottom: 50px
 				font-size: 14px
 				font-weight: 600
+				width: 180px
 				height: 45px
 				margin: auto
 				cursor: pointer
+				transition: 0.5s
+				i
+					margin-top: 7px
+			.success
+				background-color: $success
+				border-color: $success
+			.error
+				background-color: $error
+				border-color: $error
 
 footer
 	background-color: #fff

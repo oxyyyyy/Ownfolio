@@ -47,25 +47,6 @@ input {
     background-color: #23c6ec;
     color: #fff; }
 
-.form_status {
-  display: none;
-  height: 100px;
-  border-radius: 3px;
-  margin-bottom: 50px;
-  padding-top: 25px; }
-
-.success {
-  display: block !important;
-  border: 1px solid #5CB85C; }
-
-.error {
-  display: block !important;
-  border: 1px solid #D9534F; }
-
-.processing {
-  display: block !important;
-  border: 1px solid #5BC0DE; }
-
 h2 {
   font-size: 22px;
   font-weight: 700;
@@ -327,9 +308,19 @@ section#contact {
       margin-bottom: 50px;
       font-size: 14px;
       font-weight: 600;
+      width: 180px;
       height: 45px;
       margin: auto;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: 0.5s; }
+      section#contact .inner_sec_row form .btn_submit i {
+        margin-top: 7px; }
+    section#contact .inner_sec_row form .success {
+      background-color: #34B911;
+      border-color: #34B911; }
+    section#contact .inner_sec_row form .error {
+      background-color: #EF3F3A;
+      border-color: #EF3F3A; }
 
 footer {
   background-color: #fff;

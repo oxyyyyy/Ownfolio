@@ -580,7 +580,7 @@
 							<input type="email" class="form-control input_inline_own" id="email" name="email" placeholder="Email" required="">
 							<input class="form-control" type="text" id="message" name="message" placeholder="Message" required="">
 							<div class="text-center">
-								<button type="submit" class="btn_own btn_submit">send message</button>
+								<button id="contact_form_submit" type="submit" class="animated btn_own btn_submit">send message</button>
 							</div>
 						</form>
 						<div class="form_status text-center align-middle"></div>
@@ -907,7 +907,7 @@
 		$(document).ready(function() {
 
 			var form = $('#contact_form');
-			var formStatus = $('.form_status');
+			var formStatus = $('#contact_form_submit');
 
 			$(form).submit(function(event) {
 
@@ -920,16 +920,14 @@
 					url: $(form).attr('action'),
 					data: formData,
 					beforeSend: function () {
-						// $(formStatus).removeClass('error text-danger animated bounceIn');
-						// $(formStatus).addClass('processing');
-						$(formStatus).html('<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>');
+						$(formStatus).html('<i class="fa fa-circle-o-notch fa-spin fa-2x fa-fw"></i>');
 					}
 				})
 
 				.done(function(response) {
 					// Make sure that the formStatus div has the 'success' class.
-					$(formStatus).removeClass('error text-danger animated bounceIn');
-					$(formStatus).addClass('success text-success animated bounceIn');
+					$(formStatus).removeClass('error bounceIn');
+					$(formStatus).addClass('success bounceIn');
 
 					// Set the message text.
 					$(formStatus).text(response);
@@ -942,14 +940,14 @@
 
 				.fail(function(data) {
 					// Make sure that the formStatus div has the 'error' class.
-					$(formStatus).removeClass('success text-success animated bounceIn');
-					$(formStatus).addClass('error text-danger animated bounceIn');
+					$(formStatus).removeClass('success bounceIn');
+					$(formStatus).addClass('error bounceIn');
 
 					// Set the message text.
 					if (data.responseText !== '') {
 							$(formStatus).text(data.responseText);
 					} else {
-							$(formStatus).text('Oops! An error occured and your message could not be sent.');
+							$(formStatus).text('Error.');
 					}
 				});
 
