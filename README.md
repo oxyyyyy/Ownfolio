@@ -1,6 +1,19 @@
 # Ownfolio
-Nice landing
+**This is my main project**
 
-**Here it is: http://bdthemes.net/demo/joomla/ownfolio/**
+**_I have used these technologies:_**
+- HTML5
+- CSS3
+- SASS preprocessing
+- Bootstrap 4
+- JS
+- jQuery
+- Ajax
+- PHP
+- Git
 
-**The thing that I have done: http://a-vlasenko.zzz.com.ua/**
+Also this page is fully adaptive :sunglasses:
+
+I'll be very pleased if you watch or star this project.
+
+You can check my work [here] (http://a-vlasenko.zzz.com.ua/)
