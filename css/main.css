@@ -47,6 +47,22 @@ input {
     background-color: #23c6ec;
     color: #fff; }
 
+.success {
+  background-color: #34B911 !important;
+  border-color: #34B911 !important;
+  color: #fff !important; }
+  .success:hover {
+    background-color: #34B911 !important;
+    color: #fff !important; }
+
+.error {
+  background-color: #EF3F3A !important;
+  border-color: #EF3F3A !important;
+  color: #fff !important; }
+  .error:hover {
+    background-color: #EF3F3A !important;
+    color: #fff !important; }
+
 h2 {
   font-size: 22px;
   font-weight: 700;
@@ -299,7 +315,7 @@ section#contact {
       width: 45%;
       margin: 0 2%;
       display: inline; }
-    section#contact .inner_sec_row form input#message_input {
+    section#contact .inner_sec_row form input#message {
       width: 95%;
       margin: 50px 2% 20px 2%; }
     section#contact .inner_sec_row form .btn_submit {
@@ -308,9 +324,13 @@ section#contact {
       margin-bottom: 50px;
       font-size: 14px;
       font-weight: 600;
+      width: 180px;
       height: 45px;
       margin: auto;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: 0.5s; }
+      section#contact .inner_sec_row form .btn_submit i {
+        margin-top: 7px; }
 
 footer {
   background-color: #fff;
@@ -361,6 +381,8 @@ footer {
       font-weight: 700;
       cursor: pointer;
       margin-top: 20px; }
+      .modal .modal-content .modal-body form button i {
+        margin-top: 4px; }
 
 .modal-open {
   overflow: visible !important; }

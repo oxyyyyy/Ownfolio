@@ -50,6 +50,21 @@ input
 		background-color: $accentColor
 		color: #fff
 
+.success
+	background-color: $success !important
+	border-color: $success !important
+	color: #fff !important
+	&:hover
+		background-color: $success !important
+		color: #fff !important
+.error
+	background-color: $error !important
+	border-color: $error !important
+	color: #fff !important
+	&:hover
+		background-color: $error !important
+		color: #fff !important
+
 h2
 	font-size: 22px
 	font-weight: 700
@@ -318,7 +333,7 @@ section#contact
 				width: 45%
 				margin: 0 2%
 				display: inline
-			input#message_input
+			input#message
 				width: 95%
 				margin: 50px 2% 20px 2%
 			.btn_submit
@@ -327,9 +342,13 @@ section#contact
 				margin-bottom: 50px
 				font-size: 14px
 				font-weight: 600
+				width: 180px
 				height: 45px
 				margin: auto
 				cursor: pointer
+				transition: 0.5s
+				i
+					margin-top: 7px
 
 footer
 	background-color: #fff
@@ -383,6 +402,8 @@ footer
 					font-weight: 700
 					cursor: pointer
 					margin-top: 20px
+					i
+						margin-top: 4px
 .modal-open
 	overflow: visible !important
 .modal-dialog
