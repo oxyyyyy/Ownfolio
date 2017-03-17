@@ -129,7 +129,8 @@
 				</div>
 				<div class="col-sm-9">
 					<p>I'm an interdisciplinary designer and illustrator living in Austin, Texas. Currently, I serve as the Head of Design and Community at Bdthemes — the world's marketplace for design. I'm available for speaking engagements, interviews, and freelance
-						projects</p>
+						projects
+					</p>
 					<p>I would describe myself as someone who is honest, caring, intelligent, hardworking, and ambitious. I have a great sense of humour. I am an easy going person & don’t get easily disturbed by down’s in my life. I a spiritual person & have a good library
 						of best spiritual books. I also enjoy travelling, watching movies, going out for dinner, and having great intellectual conversations!</p>
 				</div>
@@ -683,6 +684,50 @@
 		ga('create', 'UA-91831893-1', 'auto');
 		ga('send', 'pageview');
 	</script>
+
+	<!-- HelloPreload http://hello-site.ru/preloader/ -->
+	<style type="text/css">
+		#hellopreloader>p {
+			display: none;
+		}
+
+		#hellopreloader_preload {
+			display: block;
+			position: fixed;
+			z-index: 99999;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			min-width: 1000px;
+			background: #23C6EC url(http://hello-site.ru//main/images/preloads/spinning-circles.svg) center center no-repeat;
+			background-size: 77px;
+		}
+	</style>
+	<div id="hellopreloader">
+		<div id="hellopreloader_preload"></div>
+		<p><a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a></p>
+	</div>
+	<script type="text/javascript">
+		var hellopreloader = document.getElementById("hellopreloader_preload");
+
+		function fadeOutnojquery(el) {
+			el.style.opacity = 1;
+			var interhellopreloader = setInterval(function() {
+				el.style.opacity = el.style.opacity - 0.05;
+				if (el.style.opacity <= 0.05) {
+					clearInterval(interhellopreloader);
+					hellopreloader.style.display = "none";
+				}
+			}, 16);
+		}
+		window.onload = function() {
+			setTimeout(function() {
+				fadeOutnojquery(hellopreloader);
+			}, 1000);
+		};
+	</script>
+	<!-- HelloPreload http://hello-site.ru/preloader/ -->
 
 </body>
 
