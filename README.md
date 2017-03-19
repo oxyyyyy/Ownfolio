@@ -11,6 +11,8 @@
 - Ajax
 - PHP
 - Git
+- npm
+- Gulp
 
 Also this page is fully adaptive :sunglasses:
 
