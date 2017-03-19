@@ -1,0 +1,30 @@
+{
+  "name": "ownfolio",
+  "version": "1.0.0",
+  "description": "Pretty landing page",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oxyyyyy/Ownfolio.git"
+  },
+  "author": "Alexandr Vlasenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oxyyyyy/Ownfolio/issues"
+  },
+  "homepage": "https://github.com/oxyyyyy/Ownfolio#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglifyjs": "^0.6.2"
+  }
+}
