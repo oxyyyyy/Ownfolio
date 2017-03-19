@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   color: #666;
   overflow-x: hidden;
@@ -172,12 +172,15 @@ section#about .inner_sec_row {
 
 section#skills .percent {
   float: right; }
+
 section#skills .progress {
   margin-bottom: 50px; }
   section#skills .progress .progress-bar {
     transition: 3s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
+
 section#skills #circle {
   text-align: center; }
+
 section#skills .circle_value {
   text-align: center;
   position: relative;
@@ -376,7 +379,7 @@ footer {
     .modal .modal-content .modal-body form input {
       border-bottom: 2px solid #23c6ec !important; }
     .modal .modal-content .modal-body form button {
-      font-family: "Open Sans", sans-serif;
+      font-family: 'Open Sans', sans-serif;
       font-size: 13px;
       font-weight: 700;
       cursor: pointer;
@@ -399,5 +402,3 @@ footer {
   @media screen and (max-width: 1199px) {
     #topcontrol {
       display: none; } }
-
-/*# sourceMappingURL=main.css.map */
