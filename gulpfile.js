@@ -3,12 +3,10 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglifyjs'),
-    gutil = require('gulp-util'),
     cssnano = require('gulp-cssnano'),
     rename = require('gulp-rename'),
     concatCss = require('gulp-concat-css'),
-    del = require('del'),
-    imageop = require('gulp-image-optimization');
+    del = require('del');
 
 
 gulp.task('sass', function() {
@@ -19,19 +17,9 @@ gulp.task('sass', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src([
-    'app/libs/circle-progress.min.js',
-    'app/libs/classie.js',
-    'app/libs/clipboard.min.js',
-    'app/libs/imagesloaded.pkgd.min.js',
-    'app/libs/main.js',
-    'app/libs/main2.js',
-    'app/libs/masonry.pkgd.min.js',
-    'app/libs/wow.min.js',
-    'app/libs/jquery.waypoints.min.js'
-  ])
+  return gulp.src(['app/libs/**/*.js','!app/libs/modernizr-custom.js'])
   .pipe(concat('libs.min.js'))
-  .pipe(uglify().on('error', gutil.log))
+  .pipe(uglify())
   .pipe(gulp.dest('app/js'));
 });
 
@@ -57,18 +45,7 @@ gulp.task('minCss', ['sass', 'concatCssTask'], function() {
 });
 
 gulp.task('clean', function() {
-  del('dist/**').then(paths => {
-      console.log('Deleted files and folders:\n', paths.join('\n'));
-  });
-});
-
-
-gulp.task('imgOpti', function(cb) {
-    gulp.src(['img/**/*.png','img/**/*.jpg','img/**/*.gif','img/**/*.jpeg']).pipe(imageop({
-        optimizationLevel: 5,
-        progressive: true,
-        interlaced: true
-    })).pipe(gulp.dest('img')).on('end', cb).on('error', cb);
+  return del.sync('dist/*');
 });
 
 // Watch!
@@ -79,7 +56,7 @@ gulp.task('watch', ['browser-sync', 'minCss'], function() {
 });
 
 // Bulid!
-gulp.task('build', ['sass', 'scripts', 'imgOpti', 'minCss'], function() {
+gulp.task('build', ['clean', 'sass', 'scripts', 'minCss'], function() {
 
   var buildCss = gulp.src([
     'app/css/bundle.min.css'
