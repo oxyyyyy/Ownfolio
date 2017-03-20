@@ -3,10 +3,12 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglifyjs'),
+    gutil = require('gulp-util'),
     cssnano = require('gulp-cssnano'),
     rename = require('gulp-rename'),
     concatCss = require('gulp-concat-css'),
-    del = require('del');
+    del = require('del'),
+    imageop = require('gulp-image-optimization');
 
 
 gulp.task('sass', function() {
@@ -25,10 +27,11 @@ gulp.task('scripts', function() {
     'app/libs/main.js',
     'app/libs/main2.js',
     'app/libs/masonry.pkgd.min.js',
-    'app/libs/wow.min.js'
+    'app/libs/wow.min.js',
+    'app/libs/jquery.waypoints.min.js'
   ])
   .pipe(concat('libs.min.js'))
-  .pipe(uglify())
+  .pipe(uglify().on('error', gutil.log))
   .pipe(gulp.dest('app/js'));
 });
 
@@ -54,18 +57,29 @@ gulp.task('minCss', ['sass', 'concatCssTask'], function() {
 });
 
 gulp.task('clean', function() {
-  return del.sync('dist/*');
+  del('dist/**').then(paths => {
+      console.log('Deleted files and folders:\n', paths.join('\n'));
+  });
+});
+
+
+gulp.task('imgOpti', function(cb) {
+    gulp.src(['img/**/*.png','img/**/*.jpg','img/**/*.gif','img/**/*.jpeg']).pipe(imageop({
+        optimizationLevel: 5,
+        progressive: true,
+        interlaced: true
+    })).pipe(gulp.dest('img')).on('end', cb).on('error', cb);
 });
 
 // Watch!
-gulp.task('watch', ['browser-sync', 'minCss', 'minCss'], function() {
+gulp.task('watch', ['browser-sync', 'minCss'], function() {
   gulp.watch('app/sass/**/*.sass', ['sass']);
   gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
 // Bulid!
-gulp.task('build', ['clean', 'sass', 'scripts'], function() {
+gulp.task('build', ['sass', 'scripts', 'imgOpti', 'minCss'], function() {
 
   var buildCss = gulp.src([
     'app/css/bundle.min.css'

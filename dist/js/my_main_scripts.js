@@ -1,20 +1,9 @@
 // ---------------------------------------------------------
-// Progress bar animation
-$(document).ready(function() {
-    setTimeout(function() {
-        $('.progress .progress-bar').css("width",
-            function() {
-                return $(this).attr("aria-valuenow") + "%";
-            }
-        )
-    }, 1000);
-});
+// Circle + line progress bars (Waypoints)
 
-// ---------------------------------------------------------
-// Circle progress bar
-
-$(document).ready(function() {
-    setTimeout(function() {
+var waypoint = new Waypoint({
+  element: document.getElementById('skills'),
+  handler: function(down) {
         $('#circle').circleProgress({
             value: 0.8,
             size: 200,
@@ -22,7 +11,14 @@ $(document).ready(function() {
             thickness: 4,
             fill: "#23c6ec"
         });
-    }, 500);
+        $('.progress .progress-bar').css("width",
+            function() {
+                return $(this).attr("aria-valuenow") + "%";
+            }
+        );
+        this.destroy();
+  },
+  offset: '75%'
 });
 
 // ---------------------------------------------------------
