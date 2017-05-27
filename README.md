@@ -1,5 +1,5 @@
 # Ownfolio
-**This is my main project**
+**Landing-page**
 
 **_I have used these technologies:_**
 - HTML5
@@ -18,4 +18,4 @@ Also this page is fully adaptive :sunglasses:
 
 I'll be very pleased if you watch or star this project.
 
-You can check my work [here] (http://a-vlasenko.zzz.com.ua/)
+Check out my work [here] (http://a-vlasenko.zzz.com.ua/)
